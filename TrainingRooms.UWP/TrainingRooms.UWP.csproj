@@ -154,6 +154,12 @@
       <Version>6.2.9</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TrainingRooms\TrainingRooms.csproj">
+      <Project>{976e036d-4f44-426e-ad6b-48dcb614893a}</Project>
+      <Name>TrainingRooms</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

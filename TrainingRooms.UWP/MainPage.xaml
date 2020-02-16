@@ -27,12 +27,14 @@
             <SplitView.Content>
                 <StackPanel Orientation="Vertical" Margin="15,20,0,0">
                     <TextBlock Text="Room Details" FontSize="48" FontWeight="Bold"></TextBlock>
-                    <TextBlock Text="" FontSize="48" FontWeight="Bold"></TextBlock>
+                    <TextBlock Text="{Binding ElementName=roomList, Path=SelectedItem.Name}" FontSize="28"></TextBlock>
                     <StackPanel Orientation="Horizontal" Spacing="15" >
-
+                        <SymbolIcon Symbol="Map" />
+                        <TextBlock Text="{Binding ElementName=roomList, Path=SelectedItem.Location}" FontSize="28"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Spacing="15" >
-
+                        <TextBlock Text="Number of Computers: " FontSize="28"/>
+                        <TextBlock Text="{Binding ElementName=roomList, Path=SelectedItem.NumberComputers}" FontSize="28"/>
                     </StackPanel>
                 </StackPanel>
             </SplitView.Content>
