@@ -9,6 +9,33 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <SplitView IsPaneOpen="True" PanePlacement="Left" DisplayMode="Inline">
+            <SplitView.Pane>
+                <ListView x:Name="roomList" Margin="5,0" HorizontalAlignment="Left"
+                          ItemsSource="{Binding}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Path=Name}" FontSize="24"></TextBlock>
+                                <TextBlock Text="|"  Padding="5,0" FontSize="24"></TextBlock>
+                                <TextBlock Text="{Binding Path=Location}" FontSize="24"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <StackPanel Orientation="Vertical" Margin="15,20,0,0">
+                    <TextBlock Text="Room Details" FontSize="48" FontWeight="Bold"></TextBlock>
+                    <TextBlock Text="" FontSize="48" FontWeight="Bold"></TextBlock>
+                    <StackPanel Orientation="Horizontal" Spacing="15" >
 
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Spacing="15" >
+
+                    </StackPanel>
+                </StackPanel>
+            </SplitView.Content>
+        </SplitView>
     </Grid>
 </Page>
